@@ -1,5 +1,90 @@
-h1
-    color: red
+// Font Roboto
+$font-stack: 'Roboto', sans-serif
 
-img
-    width: 20em
+// Colors
+$white-color: #FFFFFF
+$black-color: #000000
+$red-color: #FF0000
+$bg-color: #F8F8F8
+
+// Display Flex && Grid
+
+@mixin center-page()
+    position: fixed
+    top: 45%
+    left: 50%
+    margin: 0
+    transform: translate(-50%, -50%)
+
+@mixin center-grid()
+    display: grid
+    justify-content: center
+    align-content: center
+
+
+// Global Page Style && ClassName
+
+body
+    font-family: $font-stack
+    margin: 0
+    padding: 70px 90px
+
+html
+    background-color: $bg-color
+
+button
+    font-family: $font-stack
+
+.red-color
+    color: $red-color
+
+
+// Home Style
+
+.center-page
+    @include center-page()
+
+    h1
+        @include center-grid()
+    h4
+        @include center-grid()
+        margin-top: 20px
+        margin-bottom: 35px
+    div
+        @include center-grid()
+        button
+            color: $white-color
+            background-color: $black-color
+            width: 210px
+            height: 70px
+            font-size: 20px
+
+.title-home
+    color: $black-color
+    font-weight: 900
+    font-size: 48px
+
+.sub-title-home
+    color: $black-color
+    font-weight: 500
+    font-size: 24px
+
+
+// Portfolio Style
+// NavBar
+
+.title-logo
+    display: flex
+    align-items: center
+    h1
+        font-size: 42px
+
+.flex-end
+    display: flex
+    justify-content: end
+    width: 100vw
+    .btn-contact
+        margin: 0px 97px 0px 0px
+    span
+        font-size: 24px
+        font-weight: 400
