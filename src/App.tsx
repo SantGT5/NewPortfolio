@@ -1,7 +1,7 @@
-import "./styles.sass";
-import img from "./img.png";
-import logo from "./logo.svg";
-import { ClickCounter } from "./ClickCounter";
+import "./styles.sass"
+import img from "./img.png"
+import logo from "./logo.svg"
+import { ClickCounter } from "./ClickCounter"
 
 export const App = () => {
   return (
@@ -14,5 +14,5 @@ export const App = () => {
       <img src={logo} alt="Logo" />
       <ClickCounter />
     </div>
-  );
-};
+  )
+}

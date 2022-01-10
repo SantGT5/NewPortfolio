@@ -1,6 +1,6 @@
-const webpack = require("webpack");
+const webpack = require("webpack")
 // hot refresh config
-const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin")
 
 module.exports = {
   mode: "development", // this indicate our app is in dev mode
@@ -12,8 +12,8 @@ module.exports = {
   devtool: "cheap-module-source-map",
   plugins: [
     new webpack.DefinePlugin({
-      "process.env.name": JSON.stringify("Gian"),
+      "process.env.name": JSON.stringify("Development"),
     }),
     new ReactRefreshWebpackPlugin(),
   ],
-};
+}
