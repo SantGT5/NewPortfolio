@@ -2,7 +2,7 @@ import { SiGithub, SiLinkedin, SiInstagram } from "react-icons/si"
 
 export const WelcomeAboutMe = () => {
   return (
-    <div>
+    <div className="container bg-color">
       <div className="center">
         <h1 className="welcome">
           Welcome<span className="red-color">.</span>

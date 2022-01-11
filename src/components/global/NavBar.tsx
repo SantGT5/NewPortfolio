@@ -1,6 +1,6 @@
 export const NavBar = () => {
   return (
-    <nav className="flex title-logo">
+    <nav className="bg-color flex title-logo container">
       <h1>
         AP<span className="red-color">O</span>RTS.
       </h1>

@@ -7,7 +7,7 @@ $black-color: #000000
 $red-color: #FF0000
 $bg-color: #F8F8F8
 
-// *** Display Flex && Grid ***
+// *** Mixin ***
 
 @mixin center-page()
     position: fixed
@@ -25,15 +25,20 @@ $bg-color: #F8F8F8
     display: inline-block
     width: max-content
 
+@mixin sub-title()
+    color: $red-color
+    font-size: 24px
+    font-weight: 500
+
+@mixin title()
+    color: $black-color
+    font-size: 72px
+
 // *** Global Page Style && ClassName ***
 
 body
     font-family: $font-stack
     margin: 0
-    padding: 70px 90px
-
-html
-    background-color: $bg-color
 
 button
     font-family: $font-stack
@@ -41,14 +46,20 @@ button
 .red-color
     color: $red-color
 
-.bg-red-color
-    background-color: $red-color
-
 .white-color
     color: $white-color
 
+.bg-red-color
+    background-color: $red-color
+
+.bg-color
+    background-color: $bg-color
+
 .flex
     display: flex
+
+.container
+    padding: 70px 90px
 
 .center
     @include center-grid()
@@ -83,7 +94,7 @@ button
     font-weight: 500
     font-size: 24px
 
-// *** Portfolio Style ***
+// *** Welcome ***
 // *** NavBar ***
 
 .title-logo
@@ -104,14 +115,14 @@ button
 
 .welcome
     font-size: 72px
-    margin: 145px 0px 190px 0px
+    margin: 70px 0px 190px 0px
 
 // *** About Me ***
+    
 .about-me-container
     display: inline-block
     height: max-content
     width: max-content
-    // margin: 0px 88px 0px 0px
 
 .about-me
     @include max-content()
@@ -120,9 +131,6 @@ button
     margin: 16px 30px 16px 30px
 
 .about-text
-    display: flex
-    justify-content: center
-    align-items: center
     font-size: 36px
     font-weight: 300
 
@@ -141,4 +149,26 @@ button
     margin: 0px 45px 0px 45px
 
 .icons-welcome
-    margin: 40px 0px 0px 0px
+    margin: 40px 0px 50px 0px
+
+// *** Qualification - MyExperience ***
+
+.sub-title
+    @include sub-title()
+    @include center-grid()
+
+.title
+    @include title()
+    @include center-grid()
+
+.experience-container
+    align-items: center
+
+.date
+    font-size: 36px
+    font-weight: 400
+
+.icon-dot
+    color: $red-color
+    font-size: 100px
+
