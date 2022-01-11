@@ -33,6 +33,7 @@ $bg-color: #F8F8F8
 @mixin title()
     color: $black-color
     font-size: 72px
+    margin: 0px 0px 130px 0px
 
 // *** Global Page Style && ClassName ***
 
@@ -118,7 +119,7 @@ button
     margin: 70px 0px 190px 0px
 
 // *** About Me ***
-    
+
 .about-me-container
     display: inline-block
     height: max-content
@@ -139,7 +140,7 @@ button
     margin: 0px 0px 0px 88px
 
 // *** Icons ***
-    
+
 .icon-github,
 .icon-instagram
     font-size: 35px
@@ -161,8 +162,8 @@ button
     @include title()
     @include center-grid()
 
-.experience-container
-    align-items: center
+.expe-container
+    display: flex
 
 .date
     font-size: 36px
@@ -171,4 +172,27 @@ button
 .icon-dot
     color: $red-color
     font-size: 100px
+    margin: -30px 30px 0px 50px
 
+.expe-sub-title
+    color: #A6A6A6
+    font-size: 36px
+    font-weight: 500
+    margin: 0
+
+.expe-title
+    color: $black-color
+    font-size: 36px
+    font-weight: 500
+    margin: 0
+
+.expe-list
+    font-size: 36px
+    font-weight: 300
+    list-style-type: none
+    li::before
+        content: "•"
+        color: $black-color
+        display: inline-block
+        width: 1em
+        margin-left: -0.5em
