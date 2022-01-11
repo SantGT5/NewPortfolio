@@ -35,6 +35,8 @@ $bg-color: #F8F8F8
     font-size: 72px
     margin: 0px 0px 130px 0px
 
+@mixin name()
+
 // *** Global Page Style && ClassName ***
 
 body
@@ -63,6 +65,14 @@ button
     padding: 70px 90px
 
 .center
+    @include center-grid()
+
+.sub-title
+    @include sub-title()
+    @include center-grid()
+
+.title
+    @include title()
     @include center-grid()
 
 // *** Home Style ***
@@ -153,14 +163,6 @@ button
     margin: 40px 0px 50px 0px
 
 // *** Qualification - MyExperience ***
-
-.sub-title
-    @include sub-title()
-    @include center-grid()
-
-.title
-    @include title()
-    @include center-grid()
 
 .expe-container
     display: flex
