@@ -1,13 +1,13 @@
-// Font Roboto
+// *** Font Roboto ***
 $font-stack: 'Roboto', sans-serif
 
-// Colors
+// *** Colors ***
 $white-color: #FFFFFF
 $black-color: #000000
 $red-color: #FF0000
 $bg-color: #F8F8F8
 
-// Display Flex && Grid
+// *** Display Flex && Grid ***
 
 @mixin center-page()
     position: fixed
@@ -21,8 +21,11 @@ $bg-color: #F8F8F8
     justify-content: center
     align-content: center
 
+@mixin max-content()
+    display: inline-block
+    width: max-content
 
-// Global Page Style && ClassName
+// *** Global Page Style && ClassName ***
 
 body
     font-family: $font-stack
@@ -38,8 +41,19 @@ button
 .red-color
     color: $red-color
 
+.bg-red-color
+    background-color: $red-color
 
-// Home Style
+.white-color
+    color: $white-color
+
+.flex
+    display: flex
+
+.center
+    @include center-grid()
+
+// *** Home Style ***
 
 .center-page
     @include center-page()
@@ -69,18 +83,15 @@ button
     font-weight: 500
     font-size: 24px
 
-
-// Portfolio Style
-// NavBar
+// *** Portfolio Style ***
+// *** NavBar ***
 
 .title-logo
-    display: flex
     align-items: center
     h1
         font-size: 42px
 
 .flex-end
-    display: flex
     justify-content: end
     width: 100vw
     .btn-contact
@@ -88,3 +99,46 @@ button
     span
         font-size: 24px
         font-weight: 400
+
+// *** Welcome title ***
+
+.welcome
+    font-size: 72px
+    margin: 145px 0px 190px 0px
+
+// *** About Me ***
+.about-me-container
+    display: inline-block
+    height: max-content
+    width: max-content
+    // margin: 0px 88px 0px 0px
+
+.about-me
+    @include max-content()
+    font-size: 20px
+    font-weight: 900
+    margin: 16px 30px 16px 30px
+
+.about-text
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 36px
+    font-weight: 300
+
+.about-text-container
+    max-width: 60rem
+    margin: 0px 0px 0px 88px
+
+// *** Icons ***
+    
+.icon-github,
+.icon-instagram
+    font-size: 35px
+
+.icon-linkedin
+    font-size: 35px
+    margin: 0px 45px 0px 45px
+
+.icons-welcome
+    margin: 40px 0px 0px 0px
