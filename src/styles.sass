@@ -7,6 +7,7 @@ $black-color: #000000
 $red-color: #FF0000
 $bg-color: #F8F8F8
 $skill-color: #80888F
+$placeholder-color: #545454
 
 // *** Mixin ***
 
@@ -44,6 +45,8 @@ body
     font-family: $font-stack
     margin: 0
 
+textarea,
+input,
 button
     font-family: $font-stack
 
@@ -216,3 +219,36 @@ button
 
 .icons-container
     margin: 0px 50px
+
+// *** Contact Me ***
+
+.input-contact
+    background-color: $bg-color
+    border: none
+
+.input-contact::placeholder
+    color: $placeholder-color
+
+.input-name
+    width: 500px
+    height: 80px
+    margin-right: 10px
+    margin-bottom: 35px
+    padding-left: 25px
+
+.input-email
+    width: 500px
+    height: 80px
+    margin-left: 10px
+    margin-bottom: 35px
+    padding-left: 25px
+
+.input-subject
+    height: 80px
+    margin-bottom: 35px
+    padding-left: 25px
+
+.textarea-subject
+    padding: 25px 0px 0px 25px
+    resize: vertical
+    overflow: hidden

@@ -1,3 +1,4 @@
+import { ContactMe } from "./global/ContactMe"
 import { MyExperience } from "./global/MyExperience"
 import { NavBar } from "./global/NavBar"
 import { Skills } from "./global/Skills"
@@ -10,6 +11,7 @@ export const Resume = () => {
       <WelcomeAboutMe />
       <MyExperience />
       <Skills />
+      <ContactMe />
     </div>
   )
 }

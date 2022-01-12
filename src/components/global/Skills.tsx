@@ -46,7 +46,9 @@ export const Skills = () => {
           {icons.map((Icons, i) => {
             return (
               <div key={i} className="icons-container">
-                <Icons.icon className="skill-icons" />
+                <div className="center">
+                  <Icons.icon className="skill-icons" />
+                </div>
                 <p className="center skill-des">{Icons.des}</p>
               </div>
             )

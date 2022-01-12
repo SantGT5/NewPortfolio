@@ -28,7 +28,7 @@ export const MyExperience = () => {
   return (
     <div className="container">
       <h4 className="sub-title">QUALIFICATION</h4>
-      <h1 className="title">My Experience</h1>
+      <h1 className="title">MY EXPERIENCE</h1>
       {objExpe.map((elem, i) => {
         return (
           <div key={i} className="flex">
