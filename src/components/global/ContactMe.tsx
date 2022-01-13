@@ -23,10 +23,21 @@ export const ContactMe = () => {
           placeholder="Your Subject"
         />
         <textarea
-          rows={20}
+          rows={25}
           className="input-contact textarea-subject"
           placeholder="Your message"
         ></textarea>
+      </div>
+      <div className="center">
+        <button type="button" className="btn-style">
+          SEND MESSAGE
+        </button>
+      </div>
+      <span className="center copy-style">Or copy</span>
+      <div className="center">
+        <button type="button" className="btn-style">
+          gianspf@gmail.com
+        </button>
       </div>
     </div>
   )
