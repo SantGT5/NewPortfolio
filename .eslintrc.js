@@ -20,7 +20,7 @@ module.exports = {
     "plugin:eslint-comments/recommended",
     "prettier",
     "plugin:prettier/recommended",
-    // 'prettier/@typescript-eslint',
+    "prettier/@typescript-eslint",
   ],
   rules: {
     "no-unused-vars": "off",

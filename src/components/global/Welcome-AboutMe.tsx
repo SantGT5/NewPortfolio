@@ -19,9 +19,27 @@ export const WelcomeAboutMe = () => {
             and never bored.
           </span>
           <div className="icons-welcome">
-            <SiGithub className="icon-github" />
-            <SiLinkedin className="icon-linkedin" />
-            <SiInstagram className="icon-instagram" />
+            <a
+              rel="noreferrer"
+              href="https://github.com/SantGT5"
+              target="_blank"
+            >
+              <SiGithub className="icon-github" />
+            </a>
+            <a
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/gian-lucas/"
+              target="_blank"
+            >
+              <SiLinkedin className="icon-linkedin" />
+            </a>
+            <a
+              rel="noreferrer"
+              href="https://www.instagram.com/giaanlucas_/"
+              target="_blank"
+            >
+              <SiInstagram className="icon-instagram" />
+            </a>
           </div>
         </div>
       </div>
