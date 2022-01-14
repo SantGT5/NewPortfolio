@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 // Style components
+import "react-toastify/dist/ReactToastify.css"
 import "./styles.sass"
 
 // Pages components
