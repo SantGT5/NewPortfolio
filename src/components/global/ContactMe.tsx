@@ -30,7 +30,7 @@ export const ContactMe = () => {
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
 
-    setBtnDisabled({disabledBTN: true, desBTN: "SEND MESSAGE"})
+    setBtnDisabled({ disabledBTN: true, desBTN: "SEND MESSAGE" })
     if (
       status.message === "" ||
       status.subject === "" ||
@@ -44,8 +44,10 @@ export const ContactMe = () => {
         draggable: true,
         progress: undefined,
       })
-      setBtnDisabled({disabledBTN: false, desBTN: "SEND MESSAGE"})
-    } else if (!status.user_email.match(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/gm)) {
+      setBtnDisabled({ disabledBTN: false, desBTN: "SEND MESSAGE" })
+    } else if (
+      !status.user_email.match(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/gm)
+    ) {
       toast.error("Please, enter a valid email.", {
         position: "top-right",
         hideProgressBar: false,
@@ -54,56 +56,53 @@ export const ContactMe = () => {
         draggable: true,
         progress: undefined,
       })
-      setBtnDisabled({disabledBTN: false, desBTN: "SEND MESSAGE"})
-    }else {
+      setBtnDisabled({ disabledBTN: false, desBTN: "SEND MESSAGE" })
+    } else {
       emailjs
-      .send(
-        "service_ctj6djs",
-        "template_zqws0xe",
-        status,
-        "user_4mvhXE3O4V8snsGOqObLm"
-      )
-      .then(
-        (response) => {
-          toast.success(
-            "🚀 Wow thank you! Your email has been sent to Gian Lucas!😁",
-            {
+        .send(
+          "service_ctj6djs",
+          "template_zqws0xe",
+          status,
+          "user_4mvhXE3O4V8snsGOqObLm"
+        )
+        .then(
+          (response) => {
+            toast.success(
+              "🚀 Wow thank you! Your email has been sent to Gian Lucas!😁",
+              {
+                position: "top-right",
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: 0,
+              }
+            )
+            setBtnDisabled({ disabledBTN: true, desBTN: "MESSAGE SENT" })
+          },
+          (error) => {
+            toast.error("😢 Sorry, Something Unexpected Happened 😢", {
               position: "top-right",
               hideProgressBar: false,
               closeOnClick: true,
               pauseOnHover: true,
               draggable: true,
               progress: 0,
-            }
-          )
-          setBtnDisabled({disabledBTN: true, desBTN: "MESSAGE SENT"})
-        },
-        (error) => {
-          toast.error("😢 Sorry, Something Unexpected Happened 😢", {
-            position: "top-right",
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: 0,
-          })
-        }
-      )
+            })
+          }
+        )
     }
   }
 
   async function handleCopy() {
-    toast.success(
-      "Email copied!😁",
-      {
-        position: "top-right",
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: 0,
-      }
-    )
+    toast.success("Email copied!😁", {
+      position: "top-right",
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: 0,
+    })
     return await navigator.clipboard.writeText("gianspf@gmail.com")
   }
 
@@ -111,7 +110,7 @@ export const ContactMe = () => {
     <form onSubmit={handleSubmit}>
       <ToastContainer theme="colored" limit={3} autoClose={5000} />
       <div className="container">
-        <h4 className="sub-title">CONTACT ME</h4>
+        <h4 className="sub-title" id="subTitleID">CONTACT ME</h4>
         <h1 className="title">JUST SAY HELLO</h1>
         <div className="center">
           <div className="flex">

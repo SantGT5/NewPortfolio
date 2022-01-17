@@ -5,7 +5,7 @@ export const NavBar = () => {
         AP<span className="red-color">O</span>RTS.
       </h1>
       <div className="flex flex-end">
-        <span className="btn-contact">Contact</span>
+        <a href="#subTitleID" className="btn-contact">Contact</a>
         <span>My CV</span>
       </div>
     </nav>
