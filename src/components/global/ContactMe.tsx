@@ -10,6 +10,10 @@ type contactMe = {
 }
 
 export const ContactMe = () => {
+  const [btnDisabled, setBtnDisabled] = React.useState({
+    disabledBTN: false,
+    desBTN: "SEND MESSAGE",
+  })
   const [status, setStatus] = React.useState<contactMe>({
     user_name: "",
     user_email: "",
@@ -25,68 +29,81 @@ export const ContactMe = () => {
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
-    console.log("dentro do submit")
 
-    toast.update("Upload in Progress", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: false,
-      pauseOnHover: false,
-      draggable: true,
-      progress: 1,
-    })
-
-    toast.success(
-              "🚀 Wow so easy! Your e-mail has been set to Gian Liucas!😁",
-              {
-                position: "top-right",
-                autoClose: 4000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: 0,
-              }
-            )
-
-    // emailjs
-    //   .send(
-    //     "service_ctj6djs",
-    //     "template_zqws0xe",
-    //     status,
-    //     "user_4mvhXE3O4V"
-    //   )
-    //   .then(
-    //     (response) => {
-    //       toast.success(
-    //         "🚀 Wow so easy! Your e-mail has been set to Gian Liucas!😁",
-    //         {
-    //           position: "top-right",
-    //           autoClose: 4000,
-    //           hideProgressBar: false,
-    //           closeOnClick: true,
-    //           pauseOnHover: true,
-    //           draggable: true,
-    //           progress: 0,
-    //         }
-    //       )
-    //     },
-    //     (error) => {
-    //       toast.error("😢 Sorry, Something Unexpected Happened 😢", {
-    //         position: "top-right",
-    //         autoClose: 4000,
-    //         hideProgressBar: false,
-    //         closeOnClick: true,
-    //         pauseOnHover: true,
-    //         draggable: true,
-    //         progress: 0,
-    //       })
-    //     }
-    //   )
+    setBtnDisabled({disabledBTN: true, desBTN: "SEND MESSAGE"})
+    if (
+      status.message === "" ||
+      status.subject === "" ||
+      status.user_name === ""
+    ) {
+      toast.info("All fields is required.", {
+        position: "top-right",
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+      setBtnDisabled({disabledBTN: false, desBTN: "SEND MESSAGE"})
+    } else if (!status.user_email.match(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/gm)) {
+      toast.error("Please, enter a valid email.", {
+        position: "top-right",
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+      setBtnDisabled({disabledBTN: false, desBTN: "SEND MESSAGE"})
+    }else {
+      emailjs
+      .send(
+        "service_ctj6djs",
+        "template_zqws0xe",
+        status,
+        "user_4mvhXE3O4V8snsGOqObLm"
+      )
+      .then(
+        (response) => {
+          toast.success(
+            "🚀 Wow thank you! Your email has been sent to Gian Lucas!😁",
+            {
+              position: "top-right",
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: 0,
+            }
+          )
+          setBtnDisabled({disabledBTN: true, desBTN: "MESSAGE SENT"})
+        },
+        (error) => {
+          toast.error("😢 Sorry, Something Unexpected Happened 😢", {
+            position: "top-right",
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: 0,
+          })
+        }
+      )
+    }
   }
 
   async function handleCopy() {
+    toast.success(
+      "Email copied!😁",
+      {
+        position: "top-right",
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: 0,
+      }
+    )
     return await navigator.clipboard.writeText("gianspf@gmail.com")
   }
 
@@ -111,7 +128,7 @@ export const ContactMe = () => {
             <input
               className="input-contact input-email"
               required={true}
-              type="text"
+              type="email"
               name="user_email"
               value={status.user_email}
               onChange={handleChange}
@@ -138,8 +155,18 @@ export const ContactMe = () => {
           />
         </div>
         <div className="center">
-          <button type="submit" className="btn-style" onClick={handleSubmit}>
-            SEND MESSAGE
+          <button
+            type="submit"
+            className="btn-style"
+            disabled={btnDisabled.disabledBTN}
+            style={
+              btnDisabled.disabledBTN === true
+                ? { color: "#666666", backgroundColor: "#cccccc" }
+                : {}
+            }
+            onClick={handleSubmit}
+          >
+            {btnDisabled.desBTN}
           </button>
         </div>
         <span className="center copy-style">Or click to copy</span>
