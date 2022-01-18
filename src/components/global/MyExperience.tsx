@@ -32,7 +32,7 @@ export const MyExperience = () => {
       {objExpe.map((elem, i) => {
         return (
           <div key={i} className="flex">
-            <div className="expe-container">
+            <div className="flex">
               <span className="date">{elem.date}</span>
               <BsDot className="icon-dot" />
             </div>

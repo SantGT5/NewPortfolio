@@ -38,7 +38,7 @@ export const Skills = () => {
   ]
 
   return (
-    <div className="bg-color container">
+    <div className="bg-color container-skill">
       <h4 className="sub-title">APORTS</h4>
       <h1 className="title">MY SKILL</h1>
       <div className="flex">
