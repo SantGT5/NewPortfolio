@@ -113,7 +113,7 @@ export const ContactMe = () => {
         <h4 className="sub-title" id="subTitleID">CONTACT ME</h4>
         <h1 className="title">JUST SAY HELLO</h1>
         <div className="center">
-          <div className="flex">
+          <div className="flex-name-email">
             <input
               className="input-contact input-name"
               required={true}

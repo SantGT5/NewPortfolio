@@ -37,6 +37,8 @@ $placeholder-color: #545454
             font-size: 18px
             @media screen and (max-width: 826px)
                 font-size: 15px
+                @media screen and (max-width: 637px)
+                    font-size: 12px
 
 @mixin title()
     color: $black-color
@@ -48,8 +50,11 @@ $placeholder-color: #545454
         @media screen and (max-width: 950px)
             font-size: 55px
             @media screen and (max-width: 826px)
-                margin: 0px 0px 90px 0px
                 font-size: 50px
+                margin: 0px 0px 90px 0px
+                @media screen and (max-width: 637px)
+                    font-size: 40px
+                    margin: 0px 0px 80px 0px
 
 @mixin name()
 
@@ -85,6 +90,8 @@ button
         padding: 70px 75px
         @media screen and (max-width: 970px)
             padding: 50px 65px
+            @media screen and (max-width: 637px)
+                padding: 40px 55px
 
 .center
     @include center-grid()
@@ -210,6 +217,8 @@ button
                 font-size: 28px
                 @media screen and (max-width: 826px)
                     font-size: 25px
+                    @media screen and (max-width: 637px)
+                        font-size: 20px
 
 .flex-end
     justify-content: end
@@ -220,6 +229,8 @@ button
             margin: 0px 80px 0px 0px
             @media screen and (max-width: 826px)
                 margin: 0px 70px 0px 0px
+                @media screen and (max-width: 637px)
+                    margin: 0px 50px 0px 0px
     a,
     span
         font-size: 24px
@@ -232,6 +243,8 @@ button
                 font-size: 18px
                 @media screen and (max-width: 826px)
                     font-size: 16px
+                    @media screen and (max-width: 637px)
+                        font-size: 13px
 
 // *** Welcome title ***
 
@@ -247,6 +260,9 @@ button
             @media screen and (max-width: 826px)
                 font-size: 50px
                 margin: 50px 0px 140px 0px
+                @media screen and (max-width: 637px)
+                    font-size: 40px
+                    margin: 50px 0px 140px 0px
 
 // *** About Me ***
 
@@ -271,6 +287,9 @@ button
                 @media screen and (max-width: 826px)
                     margin: 9px 15px 9px 15px
                     font-size: 12px
+                    @media screen and (max-width: 637px)
+                        margin: 7px 13px 7px 13px
+                        font-size: 10px
 
 .about-text
     font-size: 36px
@@ -283,6 +302,8 @@ button
                 font-size: 22px
                 @media screen and (max-width: 826px)
                     font-size: 20px
+                    @media screen and (max-width: 637px)
+                        font-size: 16px
 
 .about-text-container
     max-width: 60rem
@@ -293,8 +314,10 @@ button
             margin: 0px 0px 0px 55px
             @media screen and (max-width: 826px)
                 margin: 0px 0px 0px 45px
+                @media screen and (max-width: 637px)
+                    margin: 0px 0px 0px 30px
 
-// *** Icons ***
+// *** Icons Welcome ***
 
 .icon-github,
 .icon-instagram
@@ -306,6 +329,8 @@ button
             font-size: 25px
             @media screen and (max-width: 826px)
                 font-size: 23px
+                @media screen and (max-width: 637px)
+                    font-size: 20px
 
 .icon-linkedin
     font-size: 35px
@@ -317,6 +342,8 @@ button
             font-size: 25px
             @media screen and (max-width: 826px)
                 font-size: 23px
+                @media screen and (max-width: 637px)
+                    font-size: 20px
 
 .icons-welcome
     margin: 40px 0px 50px 0px
@@ -336,6 +363,11 @@ button
                 font-size: 21px
                 @media screen and (max-width: 826px)
                     font-size: 17px
+                    @media screen and (max-width: 712px)
+                        width: 50px
+                        @media screen and (max-width: 637px)
+                            font-size: 16px
+                            width: 45px
 
 .icon-dot
     color: $red-color
@@ -354,6 +386,12 @@ button
                     @media screen and (max-width: 826px)
                         margin: -20px 10px 0px 10px
                         font-size: 60px
+                        @media screen and (max-width: 712px)
+                            margin: -18px 5px 0px 5px
+                            font-size: 55px
+                            @media screen and (max-width: 637px)
+                                margin: -15px 5px 0px 5px
+                                font-size: 50px
 
 .expe-sub-title
     color: #A6A6A6
@@ -368,6 +406,8 @@ button
                 font-size: 21px
                 @media screen and (max-width: 826px)
                     font-size: 17px
+                    @media screen and (max-width: 637px)
+                        font-size: 16px
 
 .expe-title
     color: $black-color
@@ -380,6 +420,8 @@ button
             font-size: 25px
             @media screen and (max-width: 826px)
                 font-size: 17px
+                @media screen and (max-width: 637px)
+                    font-size: 16px
 
 .expe-list
     font-size: 36px
@@ -393,12 +435,16 @@ button
                 font-size: 21px
                 @media screen and (max-width: 826px)
                     font-size: 17px
+                    @media screen and (max-width: 637px)
+                        font-size: 16px
     li::before
         content: "•"
         color: $black-color
         display: inline-block
         width: 1em
         margin-left: -0.5em
+        @media screen and (max-width: 712px)
+            margin-left: -1.7em
 
 // *** Aports Skills ***
 
@@ -411,6 +457,8 @@ button
         font-size: 70px
         @media screen and (max-width: 1000px)
             font-size: 60px
+            @media screen and (max-width: 637px)
+                font-size: 50px
 
 .skill-des
     color: $skill-color
@@ -423,6 +471,9 @@ button
         @media screen and (max-width: 1000px)
             margin: 25px 0px 0px 0px
             font-size: 20px
+            @media screen and (max-width: 637px)
+                margin: 20px 0px 0px 0px
+                font-size: 17px
 
 .icons-container
     margin: 0px 40px
@@ -430,13 +481,17 @@ button
         margin: 0px 35px
     @media screen and (max-width: 1000px)
         margin: 0px 30px
+        @media screen and (max-width: 637px)
+            margin: 0px 25px
 
 .container-skill
     padding: 70px 0px
     @media screen and (max-width: 970px)
         padding: 50px 0px
         @media screen and (max-width: 826px)
-            adding: 55px 0px
+            padding: 55px 0px
+            @media screen and (max-width: 637px)
+                padding: 40px 0px
 
 // *** Contact Me ***
 
@@ -463,6 +518,11 @@ button
                     width: 300px
                     @media screen and (max-width: 842px)
                         width: 250px
+                        @media screen and (max-width: 712px)
+                            margin-right: 0px
+                            width: 350px
+                            @media screen and (max-width: 637px)
+                                width: 300px
 
 .input-email
     width: 500px
@@ -480,6 +540,16 @@ button
                     width: 300px
                     @media screen and (max-width: 842px)
                         width: 250px
+                        @media screen and (max-width: 712px)
+                            margin-left: 0px
+                            width: 350px
+                            @media screen and (max-width: 637px)
+                                width: 300px
+
+.flex-name-email
+    display: flex
+    @media screen and (max-width: 712px)
+        flex-direction: column
 
 .input-subject
     height: 80px
@@ -506,6 +576,10 @@ button
             font-size: 14px
             padding: 14px
             border: none
+            @media screen and (max-width: 637px)
+                font-size: 12px
+                padding: 12px
+                border: none
 
 .copy-style
     font-size: 30px
@@ -516,6 +590,9 @@ button
         font-size: 25px
         @media screen and (max-width: 950px)
             font-size: 20px
+            @media screen and (max-width: 637px)
+                margin: 30px 0px 30px 0px
+                font-size: 15px
 
 // *** Social Media Icons ***
 
@@ -529,3 +606,5 @@ button
         font-size: 45px
         @media screen and (max-width: 826px)
             font-size: 40px
+            @media screen and (max-width: 637px)
+                font-size: 30px
