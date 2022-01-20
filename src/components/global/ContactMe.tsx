@@ -144,7 +144,7 @@ export const ContactMe = () => {
             placeholder="Your Subject"
           />
           <textarea
-            rows={25}
+            rows={20}
             required={true}
             name="message"
             value={status.message}

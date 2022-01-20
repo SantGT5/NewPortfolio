@@ -39,6 +39,10 @@ $placeholder-color: #545454
                 font-size: 15px
                 @media screen and (max-width: 637px)
                     font-size: 12px
+                    @media screen and (max-width: 586px)
+                        font-size: 10px
+                        @media screen and (max-width: 390px)
+                            font-size: 9px
 
 @mixin title()
     color: $black-color
@@ -55,8 +59,15 @@ $placeholder-color: #545454
                 @media screen and (max-width: 637px)
                     font-size: 40px
                     margin: 0px 0px 80px 0px
-
-@mixin name()
+                    @media screen and (max-width: 586px)
+                        font-size: 30px
+                        margin: 0px 0px 60px 0px
+                        @media screen and (max-width: 487px)
+                            font-size: 25px
+                            margin: 0px 0px 60px 0px
+                            @media screen and (max-width: 390px)
+                                font-size: 22px
+                                margin: 0px 0px 50px 0px
 
 // *** Global Page Style && ClassName ***
 
@@ -92,6 +103,10 @@ button
             padding: 50px 65px
             @media screen and (max-width: 637px)
                 padding: 40px 55px
+                @media screen and (max-width: 586px)
+                    padding: 30px 40px
+                    @media screen and (max-width: 507px)
+                        padding: 30px 30px
 
 .center
     @include center-grid()
@@ -219,6 +234,10 @@ button
                     font-size: 25px
                     @media screen and (max-width: 637px)
                         font-size: 20px
+                        @media screen and (max-width: 586px)
+                            font-size: 17px
+                            @media screen and (max-width: 487px)
+                                font-size: 15px
 
 .flex-end
     justify-content: end
@@ -231,6 +250,10 @@ button
                 margin: 0px 70px 0px 0px
                 @media screen and (max-width: 637px)
                     margin: 0px 50px 0px 0px
+                    @media screen and (max-width: 586px)
+                        margin: 0px 40px 0px 0px
+                        @media screen and (max-width: 487px)
+                            margin: 0px 35px 0px 0px
     a,
     span
         font-size: 24px
@@ -245,6 +268,8 @@ button
                     font-size: 16px
                     @media screen and (max-width: 637px)
                         font-size: 13px
+                        @media screen and (max-width: 586px)
+                            font-size: 12px
 
 // *** Welcome title ***
 
@@ -263,6 +288,16 @@ button
                 @media screen and (max-width: 637px)
                     font-size: 40px
                     margin: 50px 0px 140px 0px
+                    @media screen and (max-width: 586px)
+                        font-size: 30px
+                        margin: 40px 0px 120px 0px
+                        @media screen and (max-width: 487px)
+                            font-size: 25px
+                            margin: 35px 0px 110px 0px
+                            @media screen and (max-width: 419px)
+                                margin: 25px 0px 90px 0px
+                                @media screen and (max-width: 390px)
+                                    font-size: 22px
 
 // *** About Me ***
 
@@ -290,6 +325,15 @@ button
                     @media screen and (max-width: 637px)
                         margin: 7px 13px 7px 13px
                         font-size: 10px
+                        @media screen and (max-width: 586px)
+                            margin: 5px 11px 5px 11px
+                            font-size: 9px
+                            @media screen and (max-width: 487px)
+                                font-size: 9px
+                                margin: 5px 10px 5px 10px
+                                @media screen and (max-width: 390px)
+                                    font-size: 8px
+                                    margin: 5px 9px 5px 9px
 
 .about-text
     font-size: 36px
@@ -304,6 +348,12 @@ button
                     font-size: 20px
                     @media screen and (max-width: 637px)
                         font-size: 16px
+                        @media screen and (max-width: 586px)
+                            font-size: 15px
+                            @media screen and (max-width: 487px)
+                                font-size: 13px
+                                @media screen and (max-width: 390px)
+                                    font-size: 12px
 
 .about-text-container
     max-width: 60rem
@@ -316,6 +366,10 @@ button
                 margin: 0px 0px 0px 45px
                 @media screen and (max-width: 637px)
                     margin: 0px 0px 0px 30px
+                    @media screen and (max-width: 586px)
+                        margin: 0px 0px 0px 20px
+                        @media screen and (max-width: 487px)
+                            margin: 0px 0px 0px 17px
 
 // *** Icons Welcome ***
 
@@ -331,6 +385,8 @@ button
                 font-size: 23px
                 @media screen and (max-width: 637px)
                     font-size: 20px
+                    @media screen and (max-width: 586px)
+                        font-size: 17px
 
 .icon-linkedin
     font-size: 35px
@@ -344,107 +400,177 @@ button
                 font-size: 23px
                 @media screen and (max-width: 637px)
                     font-size: 20px
+                    @media screen and (max-width: 586px)
+                        font-size: 17px
+                        margin: 0px 40px 0px 40px
+                        @media screen and (max-width: 487px)
+                            margin: 0px 30px 0px 30px
 
 .icons-welcome
     margin: 40px 0px 50px 0px
     @media screen and (max-width: 950px)
         margin: 40px 0px 30px 0px
+        @media screen and (max-width: 586px)
+            margin: 35px 0px 30px 0px
+            @media screen and (max-width: 487px)
+                margin: 30px 0px 25px 0px
 
 // *** Qualification - MyExperience ***
 
 .date
     font-size: 36px
     font-weight: 400
-    @media screen and (max-width: 1379px)
+    @media screen and (max-width: 1414px)
         font-size: 30px
         @media screen and (max-width: 1379px)
             font-size: 25px
-            @media screen and (max-width: 950px)
-                font-size: 21px
-                @media screen and (max-width: 826px)
-                    font-size: 17px
-                    @media screen and (max-width: 712px)
-                        width: 50px
-                        @media screen and (max-width: 637px)
-                            font-size: 16px
-                            width: 45px
+            @media screen and (max-width: 1164px)
+                font-size: 24px
+                @media screen and (max-width: 1159px)
+                    font-size: 23.5px
+                @media screen and (max-width: 1035px)
+                    font-size: 21px
+                    @media screen and (max-width: 861px)
+                        font-size: 17px
+                        @media screen and (max-width: 747px)
+                            margin-bottom: 10px
+                            width: 100px
+                            @media screen and (max-width: 487px)
+                                font-size: 14px
+                                @media screen and (max-width: 390px)
+                                    font-size: 11px
+                        // @media screen and (max-width: 712px)
+                        //     width: 50px
+                        //     @media screen and (max-width: 637px)
+                        //         font-size: 16px
+                        //         width: 45px
+                        //         @media screen and (max-width: 586px)
+                        //             font-size: 14px
+                        //             width: 39px
+                        //             @media screen and (max-width: 504px)
+                        //                 margin-bottom: 10px
+                        //                 width: 100px
+
+.flex-experience
+    display: flex
+    @media screen and (max-width: 747px)
+        margin-bottom: 20px
+        flex-direction: column
+        flex-wrap: nowrap
+
+.icon-dot-response
+    font-size: 0px
+    color: $white-color
+    margin: 0px 0px 0px 0px
+    @media screen and (max-width: 747px)
+        font-size: 35px
+        color: $red-color
+        margin: -10px 0px 0px 0px
+        @media screen and (max-width: 390px)
+            font-size: 30px
+            margin: -9px 0px 0px 0px
 
 .icon-dot
     color: $red-color
     font-size: 100px
     margin: -30px 30px 0px 50px
-    @media screen and (max-width: 1379px)
+    @media screen and (max-width: 1414px)
         margin: -30px 20px 0px 20px
         @media screen and (max-width: 1379px)
             margin: -30px 10px 0px 10px
             @media screen and (max-width: 1156px)
                 margin: -25px 10px 0px 10px
                 font-size: 80px
-                @media screen and (max-width: 950px)
+                @media screen and (max-width: 1035px)
                     margin: -21px 10px 0px 10px
                     font-size: 65px
-                    @media screen and (max-width: 826px)
+                    @media screen and (max-width: 861px)
                         margin: -20px 10px 0px 10px
                         font-size: 60px
-                        @media screen and (max-width: 712px)
-                            margin: -18px 5px 0px 5px
-                            font-size: 55px
-                            @media screen and (max-width: 637px)
-                                margin: -15px 5px 0px 5px
-                                font-size: 50px
+                        @media screen and (max-width: 747px)
+                            font-size: 0px
+                        // @media screen and (max-width: 712px)
+                        //     margin: -18px 5px 0px 5px
+                        //     font-size: 55px
+                        //     @media screen and (max-width: 637px)
+                        //         margin: -15px 5px 0px 5px
+                        //         font-size: 50px
+                        //         @media screen and (max-width: 586px)
+                        //             margin: -13px 5px 0px 5px
+                        //             font-size: 45px
+                        //             @media screen and (max-width: 504px)
+                        //                 margin: -12px 0px 0px 0px
+                        //                 font-size: 40px
+                        //                 @media screen and (max-width: 586px)
+                        //                     font-size: 0px
+
+.expe-description
+    margin-left: 35px
+    @media screen and (max-width: 390px)
+        margin-left: 30px
 
 .expe-sub-title
     color: #A6A6A6
     font-size: 36px
     font-weight: 500
     margin: 0
-    @media screen and (max-width: 1379px)
+    @media screen and (max-width: 1414px)
         font-size: 30px
         @media screen and (max-width: 1156px)
             font-size: 25px
-            @media screen and (max-width: 950px)
+            @media screen and (max-width: 1035px)
                 font-size: 21px
-                @media screen and (max-width: 826px)
+                @media screen and (max-width: 861px)
                     font-size: 17px
-                    @media screen and (max-width: 637px)
-                        font-size: 16px
+                    @media screen and (max-width: 487px)
+                        font-size: 14px
+                        @media screen and (max-width: 390px)
+                            font-size: 11px
 
 .expe-title
     color: $black-color
     font-size: 36px
     font-weight: 500
     margin: 0
-    @media screen and (max-width: 1379px)
+    @media screen and (max-width: 1414px)
         font-size: 30px
         @media screen and (max-width: 1156px)
             font-size: 25px
             @media screen and (max-width: 826px)
                 font-size: 17px
-                @media screen and (max-width: 637px)
-                    font-size: 16px
+                @media screen and (max-width: 487px)
+                        font-size: 14px
+                        @media screen and (max-width: 390px)
+                            font-size: 11px
 
 .expe-list
     font-size: 36px
     font-weight: 300
     list-style-type: none
-    @media screen and (max-width: 1379px)
+    @media screen and (max-width: 1414px)
         font-size: 30px
         @media screen and (max-width: 1156px)
             font-size: 25px
             @media screen and (max-width: 950px)
                 font-size: 21px
-                @media screen and (max-width: 826px)
+                @media screen and (max-width: 861px)
                     font-size: 17px
-                    @media screen and (max-width: 637px)
-                        font-size: 16px
+                    @media screen and (max-width: 487px)
+                        font-size: 14px
+                        @media screen and (max-width: 390px)
+                            font-size: 11px
     li::before
         content: "•"
         color: $black-color
         display: inline-block
         width: 1em
         margin-left: -0.5em
-        @media screen and (max-width: 712px)
+        @media screen and (max-width: 527px)
             margin-left: -1.7em
+            @media screen and (max-width: 487px)
+                margin-left: -2.2em
+                @media screen and (max-width: 390px)
+                    margin-left: -3.5em
 
 // *** Aports Skills ***
 
@@ -459,6 +585,10 @@ button
             font-size: 60px
             @media screen and (max-width: 637px)
                 font-size: 50px
+                @media screen and (max-width: 586px)
+                    font-size: 45px
+                    @media screen and (max-width: 390px)
+                        font-size: 37px
 
 .skill-des
     color: $skill-color
@@ -474,6 +604,10 @@ button
             @media screen and (max-width: 637px)
                 margin: 20px 0px 0px 0px
                 font-size: 17px
+                @media screen and (max-width: 586px)
+                    font-size: 15px
+                    @media screen and (max-width: 390px)
+                        font-size: 10px
 
 .icons-container
     margin: 0px 40px
@@ -483,6 +617,10 @@ button
         margin: 0px 30px
         @media screen and (max-width: 637px)
             margin: 0px 25px
+            @media screen and (max-width: 586px)
+                margin: 0px 20px
+                @media screen and (max-width: 390px)
+                    margin: 0px 13px
 
 .container-skill
     padding: 70px 0px
@@ -492,6 +630,8 @@ button
             padding: 55px 0px
             @media screen and (max-width: 637px)
                 padding: 40px 0px
+                @media screen and (max-width: 586px)
+                    padding: 30px 0px
 
 // *** Contact Me ***
 
@@ -501,6 +641,8 @@ button
 
 .input-contact::placeholder
     color: $placeholder-color
+    @media screen and (max-width: 504px)
+        font-size: 12px
 
 .input-name
     width: 500px
@@ -519,10 +661,19 @@ button
                     @media screen and (max-width: 842px)
                         width: 250px
                         @media screen and (max-width: 712px)
+                            margin-bottom: 25px
                             margin-right: 0px
                             width: 350px
                             @media screen and (max-width: 637px)
                                 width: 300px
+                                @media screen and (max-width: 586px)
+                                    height: 60px
+                                    @media screen and (max-width: 487px)
+                                        height: 50px
+                                        @media screen and (max-width: 390px)
+                                            width: 250px
+                                            @media screen and (max-width: 336px)
+                                                width: 200px
 
 .input-email
     width: 500px
@@ -541,10 +692,19 @@ button
                     @media screen and (max-width: 842px)
                         width: 250px
                         @media screen and (max-width: 712px)
+                            margin-bottom: 25px
                             margin-left: 0px
                             width: 350px
                             @media screen and (max-width: 637px)
                                 width: 300px
+                                @media screen and (max-width: 586px)
+                                    height: 60px
+                                    @media screen and (max-width: 487px)
+                                        height: 50px
+                                        @media screen and (max-width: 390px)
+                                            width: 250px
+                                            @media screen and (max-width: 336px)
+                                                width: 200px
 
 .flex-name-email
     display: flex
@@ -555,6 +715,12 @@ button
     height: 80px
     margin-bottom: 35px
     padding-left: 25px
+    @media screen and (max-width: 712px)
+        margin-bottom: 25px
+        @media screen and (max-width: 586px)
+            height: 60px
+            @media screen and (max-width: 487px)
+                height: 50px
 
 .textarea-subject
     padding: 25px 0px 0px 25px
@@ -580,6 +746,10 @@ button
                 font-size: 12px
                 padding: 12px
                 border: none
+                @media screen and (max-width: 504px)
+                    font-size: 10px
+                    padding: 10px
+                    border: none
 
 .copy-style
     font-size: 30px
@@ -593,6 +763,9 @@ button
             @media screen and (max-width: 637px)
                 margin: 30px 0px 30px 0px
                 font-size: 15px
+                @media screen and (max-width: 504px)
+                    margin: 25px 0px 25px 0px
+                    font-size: 13px
 
 // *** Social Media Icons ***
 
@@ -608,3 +781,5 @@ button
             font-size: 40px
             @media screen and (max-width: 637px)
                 font-size: 30px
+                @media screen and (max-width: 586px)
+                    font-size: 25px

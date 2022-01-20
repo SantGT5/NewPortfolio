@@ -31,8 +31,9 @@ export const MyExperience = () => {
       <h1 className="title">MY EXPERIENCE</h1>
       {objExpe.map((elem, i) => {
         return (
-          <div key={i} className="flex">
+          <div key={i} className="flex-experience">
             <div className="flex">
+            <BsDot className="icon-dot-response" />
               <span className="date">{elem.date}</span>
               <BsDot className="icon-dot" />
             </div>
