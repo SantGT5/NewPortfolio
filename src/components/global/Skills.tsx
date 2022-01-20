@@ -42,7 +42,12 @@ export const Skills = () => {
       <h4 className="sub-title">APORTS</h4>
       <h1 className="title">MY SKILL</h1>
       <div className="flex">
-        <Marquee speed={55} gradientColor={[248, 248, 248]} gradient={false} pauseOnHover={true}>
+        <Marquee
+          speed={55}
+          gradientColor={[248, 248, 248]}
+          gradient={false}
+          pauseOnHover={true}
+        >
           {icons.map((Icons, i) => {
             return (
               <div key={i} className="icons-container">

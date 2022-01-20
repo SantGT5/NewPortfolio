@@ -110,7 +110,9 @@ export const ContactMe = () => {
     <form onSubmit={handleSubmit}>
       <ToastContainer theme="colored" limit={3} autoClose={5000} />
       <div className="container">
-        <h4 className="sub-title" id="subTitleID">CONTACT ME</h4>
+        <h4 className="sub-title" id="subTitleID">
+          CONTACT ME
+        </h4>
         <h1 className="title">JUST SAY HELLO</h1>
         <div className="center">
           <div className="flex-name-email">

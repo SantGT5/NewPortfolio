@@ -33,7 +33,7 @@ export const MyExperience = () => {
         return (
           <div key={i} className="flex-experience">
             <div className="flex">
-            <BsDot className="icon-dot-response" />
+              <BsDot className="icon-dot-response" />
               <span className="date">{elem.date}</span>
               <BsDot className="icon-dot" />
             </div>
