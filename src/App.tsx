@@ -8,6 +8,7 @@ import "./styles.sass"
 // Pages components
 import { Home } from "./components/Home"
 import { Resume } from "./components/Resume"
+import { CvPage } from "./components/CV-Page"
 
 export const App = () => {
   return (
@@ -15,6 +16,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Resume />} />
+        <Route path="/my-resume" element={ <CvPage /> }/>
       </Routes>
     </BrowserRouter>
   )

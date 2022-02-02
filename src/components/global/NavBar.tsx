@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export const NavBar = () => {
   return (
     <nav className="bg-color flex title-logo container">
@@ -6,9 +8,11 @@ export const NavBar = () => {
       </h1>
       <div className="flex flex-end">
         <a href="#subTitleID" className="btn-contact">
-          Contact
+        Get in touch
         </a>
-        <span>My CV</span>
+        <Link to={"/my-resume"}>
+          <span>Resume</span>
+        </Link>
       </div>
     </nav>
   )
