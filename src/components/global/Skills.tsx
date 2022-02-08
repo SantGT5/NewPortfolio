@@ -39,8 +39,10 @@ export const Skills = () => {
 
   return (
     <div className="bg-color container-skill">
+      <div data-aos="fade-up" data-aos-duration="2000">
       <h4 className="sub-title">APORTS</h4>
       <h1 className="title">MY SKILL</h1>
+      </div>
       <div className="flex">
         <Marquee
           speed={55}

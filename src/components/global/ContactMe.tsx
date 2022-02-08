@@ -110,10 +110,14 @@ export const ContactMe = () => {
     <form onSubmit={handleSubmit}>
       <ToastContainer theme="colored" limit={3} autoClose={5000} />
       <div className="container">
+      <div data-aos="fade-up" data-aos-duration="2000">
         <h4 className="sub-title" id="subTitleID">
           CONTACT ME
         </h4>
+        
         <h1 className="title">JUST SAY HELLO</h1>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="3000">
         <div className="center">
           <div className="flex-name-email">
             <input
@@ -154,6 +158,7 @@ export const ContactMe = () => {
             className="input-contact textarea-subject"
             placeholder="Your message"
           />
+        </div>
         </div>
         <div className="center">
           <button

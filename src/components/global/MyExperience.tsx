@@ -27,10 +27,13 @@ export const MyExperience = () => {
 
   return (
     <div className="container">
+      <div data-aos="fade-up" data-aos-duration="2000">
       <h4 className="sub-title">QUALIFICATION</h4>
       <h1 className="title">MY EXPERIENCE</h1>
+      </div>
       {objExpe.map((elem, i) => {
         return (
+          <div data-aos="fade-right" data-aos-duration="2000">
           <div key={i} className="flex-experience">
             <div className="flex">
               <BsDot className="icon-dot-response" />
@@ -45,6 +48,7 @@ export const MyExperience = () => {
                   return <li key={i}>{elem}</li>
                 })}
               </ol>
+            </div>
             </div>
           </div>
         )

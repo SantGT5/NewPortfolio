@@ -98,6 +98,9 @@ button
 .flex
     display: flex
 
+.space-evenly
+    justify-content: space-evenly
+
 .container
     padding: 70px 90px
     @media screen and (max-width: 1000px)
@@ -774,9 +777,6 @@ button
 
 // *** Social Media Icons ***
 
-.icons-social-container
-    justify-content: space-evenly
-
 .icons-social
     color: $black-color
     font-size: 60px
@@ -795,6 +795,30 @@ button
 .arrow-btn
     font-size: 40px
     position: absolute
+    @media screen and (max-width: 450px)
+        font-size: 30px
 
 .title-resume
     margin-top: 70px
+    @media screen and (max-width: 450px)
+        font-size: 30px
+
+.resume-btn
+    border: none
+    font-size: 20px
+    font-weight: bold
+    padding: 10px 20px 10px 20px
+    @media screen and (max-width: 605px)
+        font-size: 17px
+        padding: 10px 15px 10px 15px
+        @media screen and (max-width: 450px)
+            width: 150px
+            font-size: 15px
+            margin-bottom: 25px
+            padding: 10px 10px 10px 10px
+            
+
+.flex-btn-resume
+    @media screen and (max-width: 450px)
+        flex-direction: column
+        @include center-grid()
