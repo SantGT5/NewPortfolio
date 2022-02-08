@@ -16,8 +16,8 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Resume />} />
-        <Route path="/my-resume" element={ <CvPage /> }/>
-        <Route path='*' element={<Resume />} />
+        <Route path="/my-resume" element={<CvPage />} />
+        <Route path="*" element={<Resume />} />
       </Routes>
     </BrowserRouter>
   )
